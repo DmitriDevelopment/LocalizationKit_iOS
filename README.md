@@ -91,7 +91,49 @@ class CustomCameraViewController: MathCaptureViewController {
 
 ## API
 
-#### `MathCaptureProperties`
+#### MathCaptureProperties
+
+    The struct to incapsulate `MathCaptureViewController` properties.
+        public struct MathCaptureProperties {
+    
+The color of crop overlay bounds.
+    ```swift
+    let cropColor: UIColor
+    ```
+    
+    /// The icon of shutter button.
+    internal let shutterIcon : UIImage?
+    
+    /// The icon of flash button.
+    internal let flashIcon : UIImage?
+    
+    /// The icon of back button.
+    internal let backIcon : UIImage?
+    
+    /// The icon of cancel request button.
+    internal let cancelIcon : UIImage?
+    
+    /// The type of `RecognitionAnimator`. Used to provide animation for recognition process.
+    internal let animatorType : RecognitionAnimator.Type
+    
+    /// The type of UI capture action.
+    internal let captureType: CaptureType
+    
+    /// The buttons which will be presented in instantiated `MathCaptureViewController`.
+    internal let requiredButtons: [MathCaptureButton]
+    
+    /// The size of `shutter` button.
+    internal let bigButtonSize: CGSize
+    
+    /// The size of buttons.
+    internal let smallButtonSize: CGSize
+    
+    /// The crop area insets.
+    internal let cropAreaInsets: UIEdgeInsets
+    
+    /// If enabled then errors will be handled by Capture controller
+    internal let errorHandling: Bool
+
 
 
 
