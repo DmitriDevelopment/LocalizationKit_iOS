@@ -91,6 +91,9 @@ class CustomCameraViewController: MathCaptureViewController {
 
 ## API
 
+#### `MathCaptureProperties`
+
+
 
 
 ## License
