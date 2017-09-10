@@ -2,9 +2,13 @@
 
 [![Language](https://img.shields.io/badge/swift-3.0-orange.svg)](https://developer.apple.com/swift)
 
+
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+
 
 ## Installation
 
@@ -16,6 +20,8 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod "MathpixClient"
 ```
+
+
 
 ## Usage
 
@@ -89,7 +95,10 @@ class CustomCameraViewController: MathCaptureViewController {
 
 ```
 
+
+
 ## API
+
 
 
 ### MathpixFormat
@@ -124,6 +133,8 @@ The wolfram field, if present and set to on, indicates the server should add a w
         case on
     }
 ```
+
+
 
 
 ### MathCaptureProperties
@@ -203,6 +214,8 @@ If enabled then errors will be handled by capture controller
 ```swift
     let errorHandling: Bool
 ```
+
+
 
 ### MathCaptureViewController
 
