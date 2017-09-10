@@ -91,6 +91,41 @@ class CustomCameraViewController: MathCaptureViewController {
 
 ## API
 
+
+### MathpixFormat
+
+Protocol represents additional field "formats" in request body. Requested as parameter `outputFormats` array. You can set several values:
+
+#### `FormatLatex`
+
+The latex field, if present, is one of “raw” (result is the unmodified OCR output), “defaultValue” (result is OCR output with extraneous spaces removed), or “simplified” (result has spaces removed, operator shortcuts, and is split into lists where appropriate):
+
+```swift
+    public enum FormatLatex {
+        case raw, defaultValue, simplified
+    }
+```
+
+#### `FormatMathml`
+The mathml field, if present and set to on, indicates the server should add a mathml field to the JSON result that is a string containing the MathML markup for the recognized math. In the case of an incompatible result, the server will instead add a mathml_error:
+
+```swift
+    public enum FormatMathml {
+        case on
+    }
+```
+
+#### `FormatWolfram`
+
+The wolfram field, if present and set to on, indicates the server should add a wolfram field to the JSON result that is a string compatible with the Wolfram Alpha engine. In the case of an incompatible result, the server will instead add a wolfram_error field:
+
+```swift
+    public enum FormatWolfram {
+        case on
+    }
+```
+
+
 #### MathCaptureProperties
 
 The struct to incapsulate `MathCaptureViewController` properties. You can customize some UI/UX values:
@@ -128,11 +163,25 @@ The type of `RecognitionAnimator`. Used to provide animation for recognition pro
 The type of UI capture action
 ```swift
     let captureType: CaptureType
+    
+    public enum CaptureType {
+        /// Tap gesture is used to capture image.
+        case gesture
+        /// Shutter button is used to capture image.
+        case button
+    }
 ```
 
 The buttons which will be presented in instantiated `MathCaptureViewController`
 ```swift
     let requiredButtons: [MathCaptureButton]
+    
+     public enum MathCaptureButton {
+        /// Back button
+        case back
+        /// Flash button
+        case flash
+    }
 ```
 
 The size of `shutter` button
