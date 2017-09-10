@@ -126,7 +126,7 @@ The wolfram field, if present and set to on, indicates the server should add a w
 ```
 
 
-#### MathCaptureProperties
+### MathCaptureProperties
 
 The struct to incapsulate `MathCaptureViewController` properties. You can customize some UI/UX values:
 
@@ -204,7 +204,9 @@ If enabled then errors will be handled by capture controller
     let errorHandling: Bool
 ```
 
+### MathCaptureViewController
 
+You can subclass it to get more control. See example app.
 
 
 ## License
