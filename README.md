@@ -39,7 +39,7 @@ MathpixClient.recognize(image: UIImage(named: "equation")!, outputFormats: [Form
 
 #### Launch camera:
 
-MathpixClient can launch camera controller to capture and recognize images:
+You can launch camera controller to capture and recognize images:
 
 ```swift
         MathpixClient.launchCamera(source: self,
@@ -93,46 +93,67 @@ class CustomCameraViewController: MathCaptureViewController {
 
 #### MathCaptureProperties
 
-The struct to incapsulate `MathCaptureViewController` properties.
-    
-The color of crop overlay bounds.
+The struct to incapsulate `MathCaptureViewController` properties. You can customize some UI/UX values:
+
+The color of crop overlay bounds
 ```swift
     let cropColor: UIColor
 ```
-    
-    /// The icon of shutter button.
-    internal let shutterIcon : UIImage?
-    
-    /// The icon of flash button.
-    internal let flashIcon : UIImage?
-    
-    /// The icon of back button.
-    internal let backIcon : UIImage?
-    
-    /// The icon of cancel request button.
-    internal let cancelIcon : UIImage?
-    
-    /// The type of `RecognitionAnimator`. Used to provide animation for recognition process.
-    internal let animatorType : RecognitionAnimator.Type
-    
-    /// The type of UI capture action.
-    internal let captureType: CaptureType
-    
-    /// The buttons which will be presented in instantiated `MathCaptureViewController`.
-    internal let requiredButtons: [MathCaptureButton]
-    
-    /// The size of `shutter` button.
-    internal let bigButtonSize: CGSize
-    
-    /// The size of buttons.
-    internal let smallButtonSize: CGSize
-    
-    /// The crop area insets.
-    internal let cropAreaInsets: UIEdgeInsets
-    
-    /// If enabled then errors will be handled by Capture controller
-    internal let errorHandling: Bool
 
+The icon of shutter button
+```swift
+    let shutterIcon : UIImage?
+```
+
+The icon of flash button
+```swift
+    let flashIcon : UIImage?
+```
+
+The icon of back button
+```swift
+    let backIcon : UIImage?
+```
+
+The icon of cancel request button
+```swift
+    let cancelIcon : UIImage?
+```
+
+The type of `RecognitionAnimator`. Used to provide animation for recognition process
+```swift
+    let animatorType : RecognitionAnimator.Type
+```
+
+The type of UI capture action
+```swift
+    let captureType: CaptureType
+```
+
+The buttons which will be presented in instantiated `MathCaptureViewController`
+```swift
+    let requiredButtons: [MathCaptureButton]
+```
+
+The size of `shutter` button
+```swift
+    let bigButtonSize: CGSize
+```
+
+The size of buttons
+```swift
+    let smallButtonSize: CGSize
+```
+
+The crop area insets
+```swift
+    let cropAreaInsets: UIEdgeInsets
+```
+
+If enabled then errors will be handled by capture controller
+```swift
+    let errorHandling: Bool
+```
 
 
 
