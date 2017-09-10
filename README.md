@@ -93,13 +93,12 @@ class CustomCameraViewController: MathCaptureViewController {
 
 #### MathCaptureProperties
 
-    The struct to incapsulate `MathCaptureViewController` properties.
-        public struct MathCaptureProperties {
+The struct to incapsulate `MathCaptureViewController` properties.
     
 The color of crop overlay bounds.
-    ```swift
+```swift
     let cropColor: UIColor
-    ```
+```
     
     /// The icon of shutter button.
     internal let shutterIcon : UIImage?
