@@ -296,7 +296,7 @@ public enum RecognitionError: Error {
 
 ## Localization
 
-To set labels or error messages add `Localizable.strings` file to your project if you haven,t it. Then change values:
+To set labels or error messages add `Localizable.strings` file to your project if you haven't it. Then change values:
 
 ```
 // Errors
