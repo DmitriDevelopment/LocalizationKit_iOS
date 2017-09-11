@@ -223,7 +223,7 @@ You can subclass it to get more control. See example app.
 
 ## Error handling
 
-Error that you can get in callbacks represents two main types:
+Errors that you can get in callbacks represents two main types:
 
 #### NetworkError
 
@@ -258,7 +258,7 @@ public enum NetworkError: Error {
 
 #### RecognitionError
 
-Error will be thrown if recognition failed
+Error type will be thrown if recognition failed
 
 ```swift
 public enum RecognitionError: Error {
@@ -294,8 +294,26 @@ public enum RecognitionError: Error {
 
 ```
 
+## Localization
 
+To set labels or error messages add `Localizable.strings` file to your project if you haven,t it. Then change values:
 
+```
+// Errors
+"Error credintials title" = "Error";
+"Error credintials messages" = "Invalid credentials";
+"Error capture title" = "Error capture";
+"Error capture message" = "Capture image error";
+"Error timeout title" = "Timeout error";
+"Error timeout message" = "Send image timeout";
+"Error no connection tittle" = "Network error";
+"Error no connection message" = "No internet connection";
+"Error parse title" = "Error parse";
+"Error parse message" = "Error parse json";
+
+// Tap info label
+"Tap info label text" = "Tap anywhere to take a picture";
+```
 
 
 ## License
