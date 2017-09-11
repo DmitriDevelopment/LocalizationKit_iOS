@@ -221,6 +221,61 @@ If enabled then errors will be handled by capture controller
 
 You can subclass it to get more control. See example app.
 
+## Error handling
+
+Error that you can get in callbacks represents two main types:
+
+#### `NetworkError`
+
+Error type will be thrown if network failed
+
+```swift
+public enum NetworkError: Error {
+
+    /// Unknown or not supported error.
+    case unknown
+    
+    /// Not connected to the internet.
+    case notConnectedToInternet
+    
+    /// International data roaming turned off.
+    case internationalRoamingOff
+    
+    /// Cannot reach the server.
+    case notReachedServer
+    
+    /// Connection is lost.
+    case connectionLost
+    
+    /// Incorrect data returned from the server.
+    case incorrectDataReturned
+    
+    /// Request canceled.
+    case requestCanceled
+}
+
+```
+
+#### `RecognitionError`
+
+Error will be thrown if recognition failed
+
+```swift
+public enum RecognitionError: Error {
+
+    /// Failed parse JSON, incorrect data returned
+    case failedParseJSON
+    
+    /// Server can't recognize image as math
+    case notMath(description: String)
+    
+    /// Invalid credentials, set correct api keys
+    case invalidCredentials
+}
+
+```
+
+
 
 ## License
 
