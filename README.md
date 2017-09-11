@@ -223,7 +223,8 @@ You can subclass it to get more control. See example app.
 
 ## Error handling
 
-Errors that you can get in callbacks represents two main types:
+For simple internal error handling add `errorHandling: true` parameter to **MathCaptureProperties**.
+Errors that you can get in callbacks represents by two main types:
 
 #### NetworkError
 
