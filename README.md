@@ -275,7 +275,7 @@ public enum RecognitionError: Error {
 
 ```
 
-Example:
+### Example Error Handling:
 
 ```swift
         MathpixClient.launchCamera(source: self,
